@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <label class="col-md-1" style="margin-top: 5px; margin-left: 25px;">Дата</label>
+    <div class="col-md-2">
+        <input type="date" id="date" class="form-control">
+    </div>
+    <input type="submit" value="Выбрать" id="filter" class="btn btn-primary col-md-1">
+    <input type="submit" value="Все" id="showAll" class="btn btn-primary col-md-1" style="margin-left: 15px;">
+</div>
+
+<div class="clearfix"></div>
+
+<div class="loading-block">
+    <div class="text-center">
+        <img src="~/Content/loading.gif" width="80" />
+    </div>
+</div>
+
+<table id="events" class="tablesorter">
+    <thead></thead>
+    <tbody></tbody>
+</table>

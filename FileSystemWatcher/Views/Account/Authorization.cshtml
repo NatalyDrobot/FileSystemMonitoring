@@ -1,0 +1,21 @@
+﻿@model FileSystemWatcherDAL.Entities.User
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Authorization", "Home", FormMethod.Post, new { @class = "well span8" }))
+{
+    <div>
+        <p>Login</p>
+        @Html.TextBoxFor(x => x.Login) @Html.ValidationMessageFor(x => x.Login)
+    </div>
+    <div>
+        <p>Password</p>
+        @Html.TextBoxFor(x => x.Password) @Html.ValidationMessageFor(x => x.Password)
+    </div>
+    <input type="submit" value="Вход" />
+}
+
