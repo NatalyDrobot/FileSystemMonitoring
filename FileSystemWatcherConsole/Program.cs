@@ -14,7 +14,7 @@ namespace FileSystemWatcherConsole
         {
 
             string[] path = new string[1];
-            path[0] = @"D:Temp";
+            path[0] = @"D:\Temp";
 
             if (args.Length == 0)
             {

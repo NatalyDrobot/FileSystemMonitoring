@@ -26,9 +26,14 @@ namespace FileSystemWatcherConsole
                     Thread.Sleep(2000);
                     sc.Refresh();
                 }
-                Console.WriteLine(sc.Status);
+               // Console.WriteLine(sc.Status);
 
                 sc.Start(path);
+                while (sc.Status == ServiceControllerStatus.Stopped)
+                {
+                    Thread.Sleep(2000);
+                    sc.Refresh();
+                }
             }
         }
     }
